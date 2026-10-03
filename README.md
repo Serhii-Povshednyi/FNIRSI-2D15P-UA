@@ -1,4 +1,4 @@
-# FNIRSI 2D15P — UA mod 1.1
+# FNIRSI 2D15P — UA mod 1.2
 
 Неофіційна модифікація прошивки осцилографа **FNIRSI 2D15P**: **українська мова інтерфейсу** та **виправлений англійський переклад**.
 Unofficial modification of the **FNIRSI 2D15P** firmware: **Ukrainian interface language** and **corrected English translation**. *English version below.*
@@ -24,7 +24,7 @@ Unofficial modification of the **FNIRSI 2D15P** firmware: **Ukrainian interface 
 - **Виправлена англійська**, наприклад: «Level» → «Horizontal», «Ramp» → «Triangle», «Skew» → «Offset», «Regarding» → «About», «Auto Shut» → «Auto Off», «2.bmpSaving...» → «2.bmp saving...».
 - **Верхнє меню в три ряди**: повні назви вміщаються і більше не перекривають підменю, зони дотику кнопок розширено.
 - Рядок стану: короткі назви режимів синхронізації, які не переносяться.
-- У «Про прилад» видно версію моду: «Версія (UA-мод 1.1)».
+- У «Про прилад» видно версію моду: «Версія (UA-мод 1.2)».
 
 ### Що НЕ змінено
 - **Вимірювання, калібрування, генератор, мультиметр** працюють за заводською логікою. Мод змінює лише тексти, шрифти й розмітку меню.
@@ -36,9 +36,9 @@ Unofficial modification of the **FNIRSI 2D15P** firmware: **Ukrainian interface 
 
 1. Завантажте з сайту FNIRSI **офіційну** прошивку V2.7.0.7 і розпакуйте архів. Потрібен файл `2D15P_V2.7.0.7_260826.bin`.
 2. Відкрийте **Rom Patcher JS**: https://www.marcrobledo.com/RomPatcher.js/ (працює в браузері, і на телефоні теж, нічого встановлювати не треба).
-3. У полі «ROM file» оберіть файл прошивки, у полі «Patch file» — `2D15P_V2.7.0.7_UA-mod-1.1.bps`, натисніть «Apply patch» і збережіть результат.
+3. У полі «ROM file» оберіть файл прошивки, у полі «Patch file» — `2D15P_V2.7.0.7_UA-mod-1.2.bps`, натисніть «Apply patch» і збережіть результат.
    *Альтернатива для комп'ютера: програма Floating IPS (Flips).*
-4. Переконайтеся, що збережений файл називається **точно** `2D15P_V2.7.0.7_260826.bin`. Якщо браузер додав до назви щось своє, перейменуйте. Для перевірки: CRC32 результату `19F9010A`.
+4. Переконайтеся, що збережений файл називається **точно** `2D15P_V2.7.0.7_260826.bin`. Якщо браузер додав до назви щось своє, перейменуйте. Для перевірки: CRC32 результату `3DD5A6F0`.
 5. На приладі (заводська англійська версія): кнопка **Menu** → **USB Sharing** → **ON**. Прилад з'явиться на комп'ютері як USB-диск.
 6. Скопіюйте файл у папку **`Upgrade file`** на цьому диску.
 7. Вимкніть і увімкніть прилад. Оновлення встановиться саме, файл після цього зникне з диска.
@@ -51,6 +51,7 @@ Unofficial modification of the **FNIRSI 2D15P** firmware: **Ukrainian interface 
 
 ### Відомі заводські вади (у моді не виправлені)
 - **Нижче ~4,19 МГц** амплітуда падає приблизно на 3 %, а у двоканальному режимі (250 МВиб/с) один фронт синуса запізнюється приблизно на 28 нс. Поріг рівно **2²² Гц = 4 194 304 Гц** і збігається з точкою, де частотомір у ПЛІС перемикає режим (вимірювання періоду ↔ підрахунок імпульсів). Мікроконтролер обробку сигналу за цим не змінює, тож причина **в ПЛІС** і в прошивці мікроконтролера не виправляється.
+- У генераторі прямокутник і трикутник обмежені **2 МГц**. Більше значення клавіатура мовчки відкидає й закривається, без жодного повідомлення.
 - «Trig'd», «Stop», «Roll» у рядку стану англійською в обох мовах.
 
 ### Відмова від відповідальності
@@ -76,7 +77,7 @@ Unofficial modification of the **FNIRSI 2D15P** firmware: **Ukrainian interface 
 - **Cyrillic in all six device fonts**, matched to the stock Latin height and weight (Fixel typeface).
 - **Corrected English**, e.g. "Level" → "Horizontal", "Ramp" → "Triangle", "Skew" → "Offset", "Regarding" → "About", "Auto Shut" → "Auto Off", "2.bmpSaving..." → "2.bmp saving...".
 - **Three-row top menu**: full labels fit and no longer cover the submenu; touch zones enlarged.
-- About page shows the mod version: "Version (UA mod 1.1)".
+- About page shows the mod version: "Version (UA mod 1.2)".
 
 ### What's NOT changed
 Measurement, calibration, generator and multimeter logic are stock. Only texts, fonts and menu layout are changed. Chinese is not available. Stock bugs below are not fixed.
@@ -84,8 +85,8 @@ Measurement, calibration, generator and multimeter logic are stock. Only texts, 
 ### Installation
 1. Download the **official** V2.7.0.7 firmware from FNIRSI and unzip it (`2D15P_V2.7.0.7_260826.bin`).
 2. Open **Rom Patcher JS**: https://www.marcrobledo.com/RomPatcher.js/ (runs in the browser, phones included). Alternative: Floating IPS (Flips).
-3. Select the firmware as "ROM file" and `2D15P_V2.7.0.7_UA-mod-1.1.bps` as "Patch file", click "Apply patch", save the result.
-4. Make sure the result is named **exactly** `2D15P_V2.7.0.7_260826.bin` (CRC32 `19F9010A`).
+3. Select the firmware as "ROM file" and `2D15P_V2.7.0.7_UA-mod-1.2.bps` as "Patch file", click "Apply patch", save the result.
+4. Make sure the result is named **exactly** `2D15P_V2.7.0.7_260826.bin` (CRC32 `3DD5A6F0`).
 5. On the device: **Menu** button → **USB Sharing** → **ON**, copy the file into the **`Upgrade file`** folder, power cycle.
 6. **Settings → Language → «Українська»** (or keep English).
 
@@ -94,6 +95,7 @@ Fully reversible. Flash the official V2.7.0.7 file the same way. If the device d
 
 ### Known stock issues (not fixed)
 - **Below ~4.19 MHz** the amplitude drops by about 3 %, and in dual-channel mode (250 MSa/s) one sine edge is delayed by about 28 ns. The threshold is exactly **2²² Hz = 4,194,304 Hz** and coincides with the FPGA frequency counter switching modes (period ↔ count). The MCU does not change signal processing based on it, so the cause is **in the FPGA** and cannot be fixed in the MCU firmware.
+- In the generator, square and triangle are limited to **2 MHz**. A higher value is silently rejected and the keypad closes without any message.
 - "Trig'd", "Stop", "Roll" in the status bar remain English.
 
 ### Disclaimer
@@ -102,6 +104,7 @@ Tested on one unit. Use at your own risk. Not affiliated with FNIRSI. Please rep
 ---
 
 ## Історія версій / Changelog
+- **1.2** — виправлено екранну клавіатуру генератора в режимі «Прямокутник»: довгий підпис «Заповнення» зсував її за лівий край екрана, і вона закривалася від будь-якого натискання. Підпис скорочено до «Запов.». / Fixed the generator keypad in Square mode: the long Ukrainian «Duty» label pushed it past the left screen edge, so any tap closed it. The label is shortened.
 - **1.1** — повернуто значки, вбудовані в шрифти (кошик на кнопці видалення в перегляді знімка та два значки попереджень), які версія 1.0 помилково прибрала разом з ієрогліфами. / Restored icons embedded in the fonts (trash can on the delete button in picture view and two warning icons) that 1.0 removed by mistake together with the CJK glyphs.
 - **1.0** — перший випуск. / First release.
 
